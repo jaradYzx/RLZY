@@ -1,0 +1,123 @@
+﻿<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+	<div id="app">
+		<el-scrollbar style="height: 672px;">
+			<el-text class="mx-1" type="info">您正在做的业务是：招聘管理-->面试管理-->面试筛选查询</el-text><br />
+			<el-text class="mx-1" type="info">当前可面试筛选的有：<el-tag>{{ jobCount }}</el-tag> 例</el-text><br /><br />
+
+			<el-table :data="tableData" style="width: 100%" :header-cell-style="{background:'#FFDB6F',color:'#606266'}">
+				<el-table-column prop="resume_id" label="档案编号" width="100"></el-table-column>
+				<el-table-column prop="human_name" label="名字" width="150"></el-table-column>
+				<el-table-column prop="human_major_kind_name" label="职位分类" width="200"></el-table-column>
+				<el-table-column prop="human_major_name" label="职位名称" width="200"></el-table-column>
+				<el-table-column prop="interview_amount" label="面试次数" width="200"></el-table-column>
+				<el-table-column prop="registe_time" label="面试时间" width="220"></el-table-column>
+				<el-table-column prop="multi_quality_degree" label="综合素质" width="100"></el-table-column>
+				<el-table-column label="操作">
+					<template #default="scope">
+						<el-button type="primary" size="small" v-on:click="handleEdit(scope.row)">
+							筛选
+						</el-button>
+					</template>
+				</el-table-column>
+			</el-table>
+
+			<br />
+
+			<el-pagination v-model:current-page="nowYe"
+						   v-model:page-size="tiaoShu"
+						   :page-sizes="[2, 4, 6, 8]"
+						   layout="total, sizes, prev, pager, next, jumper"
+						   :total="jobCount"
+						   v-on:size-change="handletiaoShuChange"
+						   v-on:current-change="handlenowYeChange">
+			</el-pagination>
+
+	</div>
+</body>
+<script type="text/javascript">
+	const { createApp, ref, reactive, computed, watchEffect } = Vue;
+	var app = createApp({
+		setup() {
+
+			var tableData = ref([])
+			var nowYe = ref(1)
+			var tiaoShu = ref(2)
+			var jobCount = ref()
+			var tj = ref("check_status = 0")
+
+			function Fill() {
+				axios.get('/EI/SelectEItjfy', {
+					params: {
+						cpage: nowYe.value,
+						psize: tiaoShu.value,
+						where: tj.value,
+					}
+				})
+					.then(res => {
+						tableData.value = res.data.data
+						jobCount.value = res.data.rows
+					}).catch(err => {
+						console.log(err)
+					})
+			}
+
+
+			Fill();
+
+			function handletiaoShuChange(ntiaoShu) {
+				tiaoShu.value = ntiaoShu
+				Fill()
+			}
+
+			function handlenowYeChange(nnowYe) {
+				nowYe.value = nnowYe
+				Fill()
+			}
+
+			function handleEdit(row) {
+				console.log(row)
+				sessionStorage.setItem('MSSX', JSON.stringify(row))
+				window.location.href = '/EI/MSSX'
+			}
+
+			return {
+				tableData,
+				jobCount,
+				nowYe,
+				tiaoShu,
+				handlenowYeChange,
+				handletiaoShuChange,
+				handleEdit,
+			}
+		}
+	})
+	app.use(ElementPlus);
+	app.mount("#app");
+</script>
+
+<style type="text/css">
+	body {
+		background-color: #FFFFBB;
+		border: 1px solid #FFDB6F;
+	}
+
+	el-table {
+		background-color: #FFFFBB;
+	}
+
+	.ZWFBDJ::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.ZWFBDJ > div {
+		border: 1px solid black;
+		float: left;
+	}
+
+</style>

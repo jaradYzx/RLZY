@@ -1,0 +1,257 @@
+﻿<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+	<div id="app">
+		<el-scrollbar style="height: 672px;">
+		<el-text class="mx-1" type="info">您正在做的业务是：客户化设置-->人力资源档案管理设置-->I级机构设置</el-text><br />
+		<el-button type="success" v-on:click="Add()" style="margin-left:1200px">新增</el-button>
+		<el-table :data="tableData" style="width: 100%" :header-cell-style="{background:'#FFDB6F',color:'#606266'}">
+			<el-table-column prop="first_kind_id" label="I级机构编号" width="250"></el-table-column>
+			<el-table-column prop="first_kind_name" label="I级机构名称" width="250"></el-table-column>
+			<el-table-column prop="first_kind_salary_id" label="薪酬发放责任人编号" width="250"></el-table-column>
+			<el-table-column prop="first_kind_sale_id" label="销售责任人编号" width="250"></el-table-column>
+			<el-table-column label="操作">
+				<template #default="scope">
+					<el-button type="primary" size="small" v-on:click="handleEdit(scope.row)">
+						修改
+					</el-button>
+					<el-button type="danger" size="small" v-on:click="handleDelete(scope.row.ffk_id)">
+						删除
+					</el-button>
+				</template>
+			</el-table-column>
+		</el-table>
+		</el-scrollbar>
+
+
+		<el-dialog v-model="dialogVisibleUp"
+				   title="I级机构修改"
+				   width="500">
+			<span>
+				<el-form ref="fUpForm" :model="uformUp" :rules="rules" label-width="auto" style="max-width: 750px">
+					<el-form-item label="I级机构编号" prop="first_kind_id">
+						<el-input v-model="uformUp.first_kind_id" />
+					</el-form-item>
+					<el-form-item label="I级机构名称" prop="first_kind_name">
+						<el-input v-model="uformUp.first_kind_name" />
+					</el-form-item>
+					<el-form-item label="薪酬发放责任人编号" prop="first_kind_salary_id">
+						<el-input v-model="uformUp.first_kind_salary_id" />
+					</el-form-item>
+					<el-form-item label="销售责任人编号" prop="first_kind_sale_id">
+						<el-input v-model="uformUp.first_kind_sale_id" />
+					</el-form-item>
+					<el-form-item>
+						<el-button v-on:click="dialogVisibleUp = false" style="margin-left:333px">取消</el-button>
+						<el-button type="primary" v-on:click="upOk()">
+							修改
+						</el-button>
+					</el-form-item>
+				</el-form>
+
+			</span>
+
+		</el-dialog>
+
+		<el-dialog v-model="dialogVisibleAdd"
+				   title="I级机构添加"
+				   width="500">
+			<span>
+				<el-form ref="fAddForm" :model="uformAdd" :rules="rules" label-width="auto" style="max-width: 750px">
+					<el-form-item label="I级机构编号" prop="first_kind_id">
+						<el-input v-model="uformAdd.first_kind_id" />
+					</el-form-item>
+					<el-form-item label="I级机构名称" prop="first_kind_name">
+						<el-input v-model="uformAdd.first_kind_name" />
+					</el-form-item>
+					<el-form-item label="薪酬发放责任人编号" prop="first_kind_salary_id">
+						<el-input v-model="uformAdd.first_kind_salary_id" />
+					</el-form-item>
+					<el-form-item label="销售责任人编号" prop="first_kind_sale_id">
+						<el-input v-model="uformAdd.first_kind_sale_id" />
+					</el-form-item>
+					<el-form-item>
+						<el-button type="info" v-on:click="dialogVisibleAdd = false" style="margin-left:333px">取消</el-button>
+						<el-button type="success" v-on:click="AddOk()">
+							添加
+						</el-button>
+					</el-form-item>
+				</el-form>
+
+			</span>
+
+		</el-dialog>
+
+	</div>
+</body>
+<script type="text/javascript">
+	const { createApp, ref, reactive, computed, watchEffect } = Vue;
+	var app = createApp({
+		setup() {
+			var tableData = ref([])
+			let dialogVisibleUp = ref(false);
+			let dialogVisibleAdd = ref(false);
+
+			const uformUp = reactive({
+				ffk_id: '',
+				first_kind_name: '',
+				first_kind_id: '',
+				first_kind_salary_id: '',
+				first_kind_sale_id: '',
+
+			})
+			const uformAdd = reactive({
+				first_kind_name: '',
+				first_kind_id: '',
+				first_kind_salary_id: '',
+				first_kind_sale_id: '',
+
+			})
+
+			const rules = {
+				first_kind_id: [
+					{ required: true, message: '请输入I级机构编号', trigger: 'blur' },
+				],
+				first_kind_name: [
+					{ required: true, message: '请输入I级机构名称', trigger: 'blur' },
+				],
+				first_kind_salary_id: [
+					{ required: true, message: '请输入薪酬发放责任人编号', trigger: 'blur' },
+				],
+				first_kind_sale_id: [
+					{ required: true, message: '销售责任人编号', trigger: 'blur' },
+				]
+			}
+
+			function Fill() {
+				axios.get('/CFFK/SelectAllCFFK')
+					.then(res => {
+						console.info(res.data);
+						console.info("111");
+						tableData.value = res.data;
+					})
+					.catch(err => {
+						console.log(err);
+					})
+			}
+			Fill();
+
+			function handleEdit(row) {
+				console.info(row)
+				dialogVisibleUp.value = true;
+				uformUp.ffk_id = row.ffk_id;
+				uformUp.first_kind_name = row.first_kind_name;
+				uformUp.first_kind_id = row.first_kind_id;
+				uformUp.first_kind_salary_id = row.first_kind_salary_id;
+				uformUp.first_kind_sale_id = row.first_kind_sale_id;
+
+			}
+
+			function upOk() {
+				this.$refs.fUpForm.validate((valid) => {
+					if (valid) {
+						axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+						axios.put('/CFFK/UpdateCFSK', {
+							ffk_id: uformUp.ffk_id,
+							first_kind_name: uformUp.first_kind_name,
+							first_kind_id: uformUp.first_kind_id,
+							first_kind_salary_id: uformUp.first_kind_salary_id,
+							first_kind_sale_id: uformUp.first_kind_sale_id,
+						}).then(res => {
+							if (res.data) {
+								alert("修改成功")
+								Fill();
+								dialogVisibleUp.value = false;
+							}
+						}).catch(err => {
+							console.log(err);
+						})
+					} else {
+						return false;
+					}
+				})
+			}
+			function handleDelete(ffk_id) {
+				console.info(ffk_id)
+				if (confirm("确定删除")) {
+					axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+					axios.post('/CFFK/DeleteCFFK', {
+						id: ffk_id
+					}).then(res => {
+						if (res.data) {
+							Fill();
+							alert("删除成功")
+						}
+					}).catch(err => {
+						console.log(err);
+					})
+				}
+
+			}
+
+			function Add() {
+				dialogVisibleAdd.value = true;
+				addqk();
+			}
+
+			function addqk() {
+				uformAdd.first_kind_id = '';
+				uformAdd.first_kind_name = '';
+				uformAdd.first_kind_salary_id = '';
+				uformAdd.first_kind_sale_id = '';
+			}
+
+			function AddOk() {
+				this.$refs.fAddForm.validate((valid) => {
+					if (valid) {
+						axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+						axios.put('/CFFK/AddCFFK', {
+							first_kind_name: uformAdd.first_kind_name,
+							first_kind_id: uformAdd.first_kind_id,
+							first_kind_salary_id: uformAdd.first_kind_salary_id,
+							first_kind_sale_id: uformAdd.first_kind_sale_id,
+						}).then(res => {
+							if (res.data) {
+								alert("添加成功")
+								Fill();
+								dialogVisibleAdd.value = false;
+							}
+						}).catch(err => {
+							console.log(err);
+						})
+					} else {
+						return false;
+					}
+				})
+			}
+			return {
+				tableData,
+				dialogVisibleUp,
+				dialogVisibleAdd,
+				uformUp,
+				uformAdd,
+				handleEdit,
+				upOk,
+				handleDelete,
+				Add,
+				AddOk,
+				rules
+			}
+		}
+	})
+	app.use(ElementPlus);
+	app.mount("#app");
+</script>
+
+<style type="text/css">
+	body {
+		background-color: #FFFFBB;
+		border: 1px solid #FFDB6F;
+	}
+
+	el-table {
+		background-color: #FFFFBB;
+	}
+</style>

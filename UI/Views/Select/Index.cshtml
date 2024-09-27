@@ -1,0 +1,141 @@
+﻿<head>
+    <script src="~/lib/vue/dist/vue.global.js"></script>
+    <link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+    <script src="~/lib/element-plus/dist/index.full.js"></script>
+    <title>欢迎使用 Bette 伯乐人力资源管理系统</title>
+</head>
+<div id="app">
+    <div class="common-layout" style="font-family: 'Microsoft YaHei';">
+        <el-container>
+            <el-header class="head" style="font-family: 'Microsoft YaHei';">
+                <el-row :gutter="20" style="display: flex; align-items: center; justify-content: center;">
+                    <el-col :span="4"></el-col>
+                    <el-col :span="16" class="container" style="font-family: 'Microsoft YaHei'; font-size: 36px; color: white; text-align: center;text-shadow: 4px 4px 15px black;">人力资源管理系统</el-col>
+                    <el-col :span="4" class="container" style="padding-top: 20px;font-family: 'Microsoft YaHei'; display: flex; align-items: center; justify-content: space-between;font-size:18px">
+                        <div>欢迎您：{{zsname}}</div>
+                        <el-button plain v-on:click="Quit" style="height:20px;width:60px;font-size:12px">
+                            退出系统
+                        </el-button>
+                    </el-col>
+                </el-row>
+            </el-header>
+            <el-container>
+                <el-aside class="menu_aside" style="width: 15%; font-family: 'Microsoft YaHei';">
+                    @Html.Partial("~/Views/Menu/Index.cshtml")
+                </el-aside>
+
+                <el-main class="custom-main" width="100%" height="100%">
+                    <iframe :src="iframeView" style="width:100%;height:100%" frameborder="0" scrolling="no"></iframe>
+                </el-main>
+            </el-container>
+        </el-container>
+    </div>
+</div>
+
+<script>
+    var { createApp, reactive, ref } = Vue
+    var app = createApp({
+        setup() {
+            const zsname = ref("");
+            const iframeView = ref("/Select/KB"); // 设置 iframe 的默认 src
+
+            const Quit = () => {
+                if (confirm("确定退出系统？")) {
+                    location.replace("/User/Index");
+                }
+            };
+
+            const setSelectedView = (viewPath) => {
+                iframeView.value = viewPath;
+            };
+
+            const fetchData = () => {
+                // 获取存储的res.data值
+                const responseDataString = sessionStorage.getItem('User');
+                if (responseDataString) {
+
+                    // 将存储的字符串转换回数组
+                    const responseDataArray = JSON.parse(responseDataString);
+
+                    // 现在您可以访问responseDataArray数组中的元素
+                    //获取真实名字
+                    zsname.value = responseDataArray.uTrueName
+                } else {
+                    console.log("未找到存储的值");
+                }
+            };
+            function open() {
+                ElementPlus.ElNotification({
+                    title: '消息提示',
+                    type: 'success',
+                    dangerouslyUseHTMLString: true,
+                    message: '<hr/>欢迎登录：' + zsname.value,
+                    position: 'bottom-right'
+                })
+            }
+            fetchData();
+            open();
+            return {
+                Quit,
+                zsname,
+                setSelectedView,
+                iframeView
+            }
+        }
+    })
+    app.use(ElementPlus)
+    app.mount("#app");
+</script>
+
+<style scoped>
+    .common-layout {
+        display: flex;
+        flex-direction: column;
+        height: 98vh;
+    }
+
+    .head {
+        height: 70px;
+        background-color: #FFD553;
+        background-size: cover;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .el-main {
+        padding: 0px;
+    }
+
+    .menu_aside {
+    }
+
+    .custom-main {
+        height: calc(98vh - 70px);
+    }
+
+    .menu_aside {
+        background-color: #545c64;
+        height: calc(98vh - 70px);
+        background-color: #FFFFCC;
+    }
+
+    .your-container {
+        position: relative;
+    }
+
+    .image-in-right-corner {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+</style>

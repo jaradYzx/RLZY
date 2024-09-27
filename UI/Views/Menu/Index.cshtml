@@ -1,0 +1,326 @@
+﻿<head>
+
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="~/lib/vue/dist/vue.global.js"></script>
+    <link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+    <script src="~/lib/element-plus/dist/index.full.js"></script>
+    <script src="~/lib/axios/dist/axios.js"></script>
+</head>
+<div id="app">
+    <el-scrollbar style="height: calc(98vh - 70px);">
+        <el-menu background-color="#FFFFCC" width="100%" height="100%">
+
+            <el-sub-menu index="1">
+                <template #title>   
+                    <i class="el-icon-postcard"></i>&nbsp;
+                    招聘管理
+                </template>
+                <el-menu-item-group>
+                    <el-sub-menu index="1-1">
+                        <template #title>
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            职位发布管理
+                        </template>
+                        <el-menu-item index="1-1-1" v-on:click="setSelectedView('/EMR/Index')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            职位发布登记
+                        </el-menu-item>
+                        <el-menu-item index="1-1-2" v-on:click="setSelectedView('/EMR/FYXG')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            职位发布变更
+                        </el-menu-item>
+                        <el-menu-item index="1-1-3" v-on:click="setSelectedView('/EMR/CX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            职位发布查询
+                        </el-menu-item>
+                    </el-sub-menu>
+
+                    <el-sub-menu index="1-2">
+                        <template #title>
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            简历管理
+                        </template>
+                        <el-menu-item index="1-2-1" v-on:click="setSelectedView('/ER/Index')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            简历登记
+                        </el-menu-item>
+                        <el-menu-item index="1-2-2" v-on:click="setSelectedView('/ER/JLSX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            简历筛选
+                        </el-menu-item>
+                        <el-menu-item index="1-2-3" v-on:click="setSelectedView('/ER/YXJLCX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            有效简历查询
+                        </el-menu-item>
+                    </el-sub-menu>
+                    <el-sub-menu index="1-3">
+                        <template #title>
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            面试管理
+                        </template>
+                        <el-menu-item index="1-3-1" v-on:click="setSelectedView('/EI/MSCX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            面试结果登记
+                        </el-menu-item>
+                        <el-menu-item index="1-3-2" v-on:click="setSelectedView('/EI/MSSXCX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            面试筛选
+                        </el-menu-item>
+                    </el-sub-menu>
+                    <el-sub-menu index="1-4">
+                        <template #title>
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            录用管理
+                        </template>
+                        <el-menu-item index="1-4-1" v-on:click="setSelectedView('/EI/LYSQCX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            录用申请
+                        </el-menu-item>
+                        <el-menu-item index="1-4-1" v-on:click="setSelectedView('/EI/LYSPCX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            录用审批
+                        </el-menu-item>
+                        <el-menu-item index="1-4-1" v-on:click="setSelectedView('/EI/LYCX')">
+                            <i class="el-icon-postcard"></i>&nbsp;
+                            录用查询
+                        </el-menu-item>
+                    </el-sub-menu>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+            <el-sub-menu index="2">
+                <template #title>
+                    <i class="el-icon-user"></i>&nbsp;
+                    人力资源档案管理
+                </template>
+                <el-menu-item-group>
+                    <el-menu-item index="2-1" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-user"></i>&nbsp;
+                        人力资源档案登记
+                    </el-menu-item>
+                    <el-menu-item index="2-2" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-user"></i>&nbsp;
+                        人力资源档案登记复核
+                    </el-menu-item>
+                    <el-menu-item index="2-3" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-user"></i>&nbsp;
+                        人力资源档案查询
+                    </el-menu-item>
+                    <el-menu-item index="2-4" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-user"></i>&nbsp;
+                        人力资源档案变更
+                    </el-menu-item>
+                    <el-sub-menu index="2-5">
+                        <template #title>
+                            <i class="el-icon-user"></i>&nbsp;
+                            人力资源档案删除管理
+                        </template>
+                        <el-menu-item index="2-5-1" v-on:click="setSelectedView('/Select/KB')">
+                            <i class="el-icon-user"></i>&nbsp;
+                            人力资源档案删除
+                        </el-menu-item>
+                        <el-menu-item index="2-5-2" v-on:click="setSelectedView('/Select/KB')">
+                            <i class="el-icon-user"></i>&nbsp;
+                            档案删除恢复
+                        </el-menu-item>
+                        <el-menu-item index="2-5-3" v-on:click="setSelectedView('/Select/KB')">
+                            <i class="el-icon-user"></i>&nbsp;
+                            人力资源档案永久删除
+                        </el-menu-item>
+                    </el-sub-menu>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+            <el-sub-menu index="3">
+                <template #title>
+                    <i class="el-icon-money"></i>&nbsp;
+                    酬薪标准管理
+                </template>
+                <el-menu-item-group>
+                    <el-menu-item index="3-1" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-money"></i>&nbsp;
+                        酬薪标准登记
+                    </el-menu-item>
+                    <el-menu-item index="3-2" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-money"></i>&nbsp;
+                        酬薪标准登记复核
+                    </el-menu-item>
+                    <el-menu-item index="3-3" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-money"></i>&nbsp;
+                        酬薪标准查询
+                    </el-menu-item>
+                    <el-menu-item index="3-4" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-money"></i>&nbsp;
+                        酬薪标准变更
+                    </el-menu-item>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+            <el-sub-menu index="4">
+                <template #title>
+                    <i class="el-icon-money"></i>&nbsp;
+                    酬薪发放管理
+                </template>
+                <el-menu-item-group>
+                    <el-menu-item index="4-1" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-money"></i>&nbsp;
+                        酬薪发放登记
+                    </el-menu-item>
+                    <el-menu-item index="4-2" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-money"></i>&nbsp;
+                        酬薪发放登记复核
+                    </el-menu-item>
+                    <el-menu-item index="4-3" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-money"></i>&nbsp;
+                        酬薪发放查询
+                    </el-menu-item>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+            <el-sub-menu index="5">
+                <template #title>
+                    <i class="el-icon-edit"></i>&nbsp;
+                    调动管理
+                </template>
+                <el-menu-item-group>
+                    <el-menu-item index="5-1" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-edit"></i>&nbsp;
+                        调动登记
+                    </el-menu-item>
+                    <el-menu-item index="5-2" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-edit"></i>&nbsp;
+                        调动审核
+                    </el-menu-item>
+                    <el-menu-item index="5-3" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-edit"></i>&nbsp;
+                        调动查询
+                    </el-menu-item>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+            <el-sub-menu index="6">
+                <template #title>
+                    <i class="el-icon-setting"></i>&nbsp;
+                    客户化设置
+                </template>
+                <el-menu-item-group>
+                    <el-sub-menu index="6-1">
+                        <template #title>
+                            <i class="el-icon-setting"></i>&nbsp;
+                            人力资源档案管理设置
+                        </template>
+                        <el-menu-item index="6-1-1" v-on:click="setSelectedView('/CFFK/Index')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            Ⅰ级机构设置
+                        </el-menu-item>
+                        <el-menu-item index="6-1-2" v-on:click="setSelectedView('/CFSK/Index')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            Ⅱ级机构设置
+                        </el-menu-item>
+                        <el-menu-item index="6-1-3" v-on:click="setSelectedView('/CFTK/Index')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            Ⅲ级机构设置
+                        </el-menu-item>
+                        <el-menu-item index="6-1-4" v-on:click="setSelectedView('/CPC/ZCSZ')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            职称设置
+                        </el-menu-item>
+                        <el-menu-item index="6-1-5" v-on:click="setSelectedView('/CMK/Index')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            职位分类设置
+                        </el-menu-item>
+                        <el-menu-item index="6-1-6" v-on:click="setSelectedView('/CM/Index')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            职位设置
+                        </el-menu-item>
+                        <el-menu-item index="6-1-7" v-on:click="setSelectedView('/CPC/Index')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            公共属性设置
+                        </el-menu-item>
+                    </el-sub-menu>
+                    
+                    <el-sub-menu index="6-2">
+                        <template #title>
+                            <i class="el-icon-setting"></i>&nbsp;
+                            薪酬管理设置
+                        </template>
+                        <el-menu-item index="6-2-1" v-on:click="setSelectedView('/CPC/XZXMSZ')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            薪酬项目设置
+                        </el-menu-item>
+                        <el-menu-item index="6-2-2" v-on:click="setSelectedView('/Select/KB')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            薪酬发放方式设置
+                        </el-menu-item>
+                    </el-sub-menu>
+                    <el-sub-menu index="6-3">
+                        <template #title>
+                            <i class="el-icon-setting"></i>&nbsp;
+                            其他设置
+                        </template>
+                        <el-menu-item index="6-3-1" v-on:click="setSelectedView('/Select/KB')">
+                            <i class="el-icon-setting"></i>&nbsp;
+                            关键字查询设置
+                        </el-menu-item>
+                    </el-sub-menu>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+            <el-sub-menu index="7">
+                <template #title>
+                    <i class="el-icon-tickets"></i>&nbsp;
+                    标准数据表
+                </template>
+                <el-menu-item-group>
+                    <el-menu-item index="7-1" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-tickets"></i>&nbsp;
+                        Excel标准数据报表
+                    </el-menu-item>
+                    <el-menu-item index="7-2" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-tickets"></i>&nbsp;
+                        Pdt标准数据报表
+                    </el-menu-item>
+                    <el-menu-item index="7-3" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-tickets"></i>&nbsp;
+                        Xml标准数据报表
+                    </el-menu-item>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+            <el-sub-menu index="8">
+                <template #title>
+                    <i class="el-icon-help"></i>&nbsp;
+                    权限管理
+                </template>
+                <el-menu-item-group>
+                    <el-menu-item index="8-1" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-help"></i>&nbsp;
+                        用户管理
+                    </el-menu-item>
+                    <el-menu-item index="8-2" v-on:click="setSelectedView('/Select/KB')">
+                        <i class="el-icon-help"></i>&nbsp;
+                        角色管理
+                    </el-menu-item>
+                </el-menu-item-group>
+            </el-sub-menu>
+
+        </el-menu>
+    </el-scrollbar>
+</div>
+
+<script>
+
+</script>
+
+<style scoped>
+    .router-link {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    * {
+        font-family: "Microsoft YaHei", sans-serif;
+    }
+</style>

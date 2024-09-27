@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = UI
+build_property.RootNamespace = UI
+build_property.ProjectDir = D:\.Net\XM2\UI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\.Net\XM2\UI
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/.Net/XM2/UI/Views/CFFK/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0ZGS1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/CFSK/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0ZTS1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/CFTK/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0ZUS1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/CMK/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01LXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/CM/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/CPC/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1BDXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/CPC/XZXMSZ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1BDXFhaWE1TWi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/CPC/ZCSZ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1BDXFpDU1ouY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/LYCX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTFlDWC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/LYSP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTFlTUC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/LYSPCX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTFlTUENYLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/LYSQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTFlTUS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/LYSQCX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTFlTUUNYLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/LYZS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTFlaUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/MSCX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTVNDWC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/MSSX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTVNTWC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EI/MSSXCX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUlcTVNTWENYLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EMR/CX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRU1SXENYLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EMR/FYXG.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRU1SXEZZWEcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/EMR/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRU1SXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/ER/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRVJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/ER/JLSX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRVJcSkxTWC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/ER/SH.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRVJcU0guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/ER/YXJLCX.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRVJcWVhKTENYLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Menu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Select/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsZWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Select/KB.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsZWN0XEtCLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/XM2/UI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k1t0mrplc2

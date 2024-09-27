@@ -1,0 +1,17 @@
+D:\.Net\XM2\EFCore\bin\Debug\net7.0\EFCore.deps.json
+D:\.Net\XM2\EFCore\bin\Debug\net7.0\EFCore.runtimeconfig.json
+D:\.Net\XM2\EFCore\bin\Debug\net7.0\EFCore.dll
+D:\.Net\XM2\EFCore\bin\Debug\net7.0\EFCore.pdb
+D:\.Net\XM2\EFCore\bin\Debug\net7.0\Domain.dll
+D:\.Net\XM2\EFCore\bin\Debug\net7.0\Domain.pdb
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.csproj.AssemblyReference.cache
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.AssemblyInfoInputs.cache
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.AssemblyInfo.cs
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.csproj.CoreCompileInputs.cache
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.csproj.Up2Date
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.dll
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\refint\EFCore.dll
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.pdb
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\EFCore.genruntimeconfig.cache
+D:\.Net\XM2\EFCore\obj\Debug\net7.0\ref\EFCore.dll

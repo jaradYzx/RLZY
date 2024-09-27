@@ -1,0 +1,23 @@
+﻿<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+	<div id="app">
+		<img width="1288px" height="676px" src="~/images/11041r35400-19.jpg" />
+	</div>
+</body>
+<script type="text/javascript">
+	const { createApp, ref, reactive, computed, watchEffect } = Vue;
+	var app = createApp({
+		setup() {
+			return {
+			}
+		}
+	})
+	app.use(ElementPlus);
+	app.mount("#app");
+</script>
+
+<style type="text/css">
+</style>

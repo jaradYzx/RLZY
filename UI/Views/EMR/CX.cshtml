@@ -1,0 +1,107 @@
+﻿<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+	<div id="app">
+		<el-text class="mx-1" type="info">您正在做的业务是：招聘管理-->职位发布管理-->职位发布查询</el-text><br />
+		<el-text class="mx-1" type="info">当前可查询职位发布总数有：<el-tag>{{ jobCount }}</el-tag> 例</el-text><br /><br />
+
+		<el-table :data="tableData" style="width: 100%" :header-cell-style="{background:'#FFDB6F',color:'#606266'}">
+			<el-table-column prop="major_name" label="职位名称" width="200"></el-table-column>
+			<el-table-column prop="third_kind_name" label="公司名称" width="200"></el-table-column>
+			<el-table-column prop="human_amount" label="招聘人数" width="150"></el-table-column>
+			<el-table-column prop="registTime" label="发布时间" width="260"></el-table-column>
+			<el-table-column prop="deadline" label="截止时间" width="260"></el-table-column>
+			<el-table-column label="操作">
+				<template #default="scope">
+					<el-text type="primary" size="small" style="font-size:14px;font-weight:bolder" v-on:click="handleEdit(scope.row)">
+						申请该职位
+					</el-text>
+				</template>
+			</el-table-column>
+		</el-table>
+
+		<br />
+
+		<el-pagination v-model:current-page="nowYe"
+					   v-model:page-size="tiaoShu"
+					   :page-sizes="[2, 4, 6, 8]"
+					   layout="total, sizes, prev, pager, next, jumper"
+					   :total="jobCount"
+					   v-on:size-change="handletiaoShuChange"
+					   v-on:current-change="handlenowYeChange">
+		</el-pagination>
+
+	</div>
+</body>
+<script type="text/javascript">
+	const { createApp, ref, reactive, computed, watchEffect } = Vue;
+	var app = createApp({
+		setup() {
+			var tableData = ref([])
+
+			var nowYe = ref(1)
+			var tiaoShu = ref(2)
+			var jobCount = ref()
+			var tj = ref("status = 1")
+
+			function Fill() {
+				axios.get('/EMR/SelectEMRtjfy', {
+					params: {
+						cpage: nowYe.value,
+						psize: tiaoShu.value,
+						where: tj.value,
+					}
+				})
+					.then(res => {
+						tableData.value = res.data.data
+						jobCount.value = res.data.rows
+					}).catch(err => {
+						console.log(err)
+					})
+			}
+
+			Fill();
+
+			function handletiaoShuChange(ntiaoShu) {
+				tiaoShu.value = ntiaoShu;
+				Fill();
+			}
+
+			function handlenowYeChange(nnowYe) {
+				nowYe.value = nnowYe;
+				Fill();
+			}
+
+			function handleEdit(row) {
+				console.info(row)
+				sessionStorage.setItem('ZW', JSON.stringify(row));
+				window.location.href = '/ER/Index';
+			}
+
+			return {
+				tableData,
+				jobCount,
+				handleEdit,
+				nowYe,
+				tiaoShu,
+				handlenowYeChange,
+				handletiaoShuChange,
+			}
+		}
+	})
+	app.use(ElementPlus);
+	app.mount("#app");
+</script>
+
+<style type="text/css">
+	body {
+		background-color: #FFFFBB;
+		border: 1px solid #FFDB6F;
+	}
+
+	el-table {
+		background-color: #FFFFBB;
+	}
+</style>

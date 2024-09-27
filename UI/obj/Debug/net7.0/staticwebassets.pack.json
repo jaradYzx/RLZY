@@ -1,0 +1,1105 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\UI.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\11041R35400-19.jpg",
+      "PackagePath": "staticwebassets\\images\\11041R35400-19.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\2.JPG",
+      "PackagePath": "staticwebassets\\images\\2.JPG"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\2003122615534015613.jpg",
+      "PackagePath": "staticwebassets\\images\\2003122615534015613.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\20120526002225111.png",
+      "PackagePath": "staticwebassets\\images\\20120526002225111.png"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\NodeImg0.gif",
+      "PackagePath": "staticwebassets\\images\\NodeImg0.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\NodeImg1.gif",
+      "PackagePath": "staticwebassets\\images\\NodeImg1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\NodeImg2.gif",
+      "PackagePath": "staticwebassets\\images\\NodeImg2.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\Thumbs.db",
+      "PackagePath": "staticwebassets\\images\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\bg_lft.jpg",
+      "PackagePath": "staticwebassets\\images\\bg_lft.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\bg_s.jpg",
+      "PackagePath": "staticwebassets\\images\\bg_s.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\bg_w.jpg",
+      "PackagePath": "staticwebassets\\images\\bg_w.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\blank.gif",
+      "PackagePath": "staticwebassets\\images\\blank.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\bt_del.gif",
+      "PackagePath": "staticwebassets\\images\\bt_del.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\bt_edit.gif",
+      "PackagePath": "staticwebassets\\images\\bt_edit.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\e_maximize.gif",
+      "PackagePath": "staticwebassets\\images\\e_maximize.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\e_restore.gif",
+      "PackagePath": "staticwebassets\\images\\e_restore.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\folder.gif",
+      "PackagePath": "staticwebassets\\images\\folder.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\folder1.gif",
+      "PackagePath": "staticwebassets\\images\\folder1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\foot-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\foot-bg.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\go.bmp",
+      "PackagePath": "staticwebassets\\images\\go.bmp"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\green.swf",
+      "PackagePath": "staticwebassets\\images\\green.swf"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\Thumbs.db",
+      "PackagePath": "staticwebassets\\images\\images\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\bonus.gif",
+      "PackagePath": "staticwebassets\\images\\images\\bonus.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\bonus1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\bonus1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\config.gif",
+      "PackagePath": "staticwebassets\\images\\images\\config.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\config1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\config1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\engage.gif",
+      "PackagePath": "staticwebassets\\images\\images\\engage.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\engage1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\engage1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\export.gif",
+      "PackagePath": "staticwebassets\\images\\images\\export.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\export1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\export1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\file.gif",
+      "PackagePath": "staticwebassets\\images\\images\\file.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\file1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\file1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\helpProgram.gif",
+      "PackagePath": "staticwebassets\\images\\images\\helpProgram.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\helpProgram1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\helpProgram1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\major_change.gif",
+      "PackagePath": "staticwebassets\\images\\images\\major_change.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\major_change1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\major_change1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\Thumbs.db",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\bonus.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\bonus.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\bonus_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\bonus_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\bonus_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\bonus_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\bonus_register_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\bonus_register_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_engage.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_engage.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_engage_firstKind.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_engage_firstKind.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_engage_secondKind.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_engage_secondKind.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file_firstKind.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file_firstKind.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file_majorFirstKind.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file_majorFirstKind.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file_majorSecondKind.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file_majorSecondKind.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file_publicSetup.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file_publicSetup.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file_secondKind.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file_secondKind.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file_thirdKind.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file_thirdKind.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_file_title.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_file_title.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_key.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_key.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_key_key.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_key_key.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_salary.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_salary.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_salary_itemName.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_salary_itemName.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_salary_orderSaleBonus.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_salary_orderSaleBonus.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_salary_payType.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_salary_payType.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\config_salary_retailSaleBonus.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\config_salary_retailSaleBonus.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_interview.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_interview.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_interview_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_interview_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_interview_register_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_interview_register_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_major_release.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_major_release.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_major_release_change_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_major_release_change_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_major_release_query_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_major_release_query_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_major_release_register.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_major_release_register.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_pass.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_pass.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_pass_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_pass_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_pass_query_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_pass_query_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_pass_register_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_pass_register_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_questiones.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_questiones.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_questiones_change_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_questiones_change_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_questiones_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_questiones_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_questiones_register.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_questiones_register.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_resume.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_resume.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_resume_check_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_resume_check_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_resume_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_resume_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_resume_register.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_resume_register.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_test.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_test.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_test_answerCheck_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_test_answerCheck_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_test_answerRegister.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_test_answerRegister.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_test_pointQuery_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_test_pointQuery_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\engage_test_questionesRegister_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\engage_test_questionesRegister_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\export.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\export.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\export_excel.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\export_excel.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\export_pdf.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\export_pdf.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\export_xml.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\export_xml.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_change_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_change_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_delete.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_delete.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_delete_delete_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_delete_delete_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_delete_realDelete_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_delete_realDelete_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_delete_recovery_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_delete_recovery_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\file_register.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\file_register.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\helpProgram.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\helpProgram.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\helpProgram1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\helpProgram1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\major_change.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\major_change.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\major_change1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\major_change1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\major_change_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\major_change_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\major_change_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\major_change_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\major_change_register_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\major_change_register_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\nseererp_hr.jpg",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\nseererp_hr.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_register_unit_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_register_unit_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_standard.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_standard.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_standard_change_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_standard_change_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_standard_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_standard_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_standard_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_standard_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\salary_standard_register.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\salary_standard_register.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\training.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\training.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\training_check_list.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\training_check_list.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\training_query_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\training_query_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\mod_image\\training_register_locate.gif",
+      "PackagePath": "staticwebassets\\images\\images\\mod_image\\training_register_locate.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\nseererp_hr.jpg",
+      "PackagePath": "staticwebassets\\images\\images\\nseererp_hr.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\salary.gif",
+      "PackagePath": "staticwebassets\\images\\images\\salary.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\salary1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\salary1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\salary_standard.gif",
+      "PackagePath": "staticwebassets\\images\\images\\salary_standard.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\salary_standard1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\salary_standard1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\training.gif",
+      "PackagePath": "staticwebassets\\images\\images\\training.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\images\\training1.gif",
+      "PackagePath": "staticwebassets\\images\\images\\training1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\jt0.gif",
+      "PackagePath": "staticwebassets\\images\\jt0.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\images\\loading.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_1.gif",
+      "PackagePath": "staticwebassets\\images\\login_1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_11.gif",
+      "PackagePath": "staticwebassets\\images\\login_11.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_1_1.jpg",
+      "PackagePath": "staticwebassets\\images\\login_1_1.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_2.jpg",
+      "PackagePath": "staticwebassets\\images\\login_2.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_22.jpg",
+      "PackagePath": "staticwebassets\\images\\login_22.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_2_1.jpg",
+      "PackagePath": "staticwebassets\\images\\login_2_1.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_3.jpg",
+      "PackagePath": "staticwebassets\\images\\login_3.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_33.jpg",
+      "PackagePath": "staticwebassets\\images\\login_33.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_3_1.jpg",
+      "PackagePath": "staticwebassets\\images\\login_3_1.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\login_button.gif",
+      "PackagePath": "staticwebassets\\images\\login_button.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\menu_bg.gif",
+      "PackagePath": "staticwebassets\\images\\menu_bg.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\menu_bg1.gif",
+      "PackagePath": "staticwebassets\\images\\menu_bg1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\menu_bg2.gif",
+      "PackagePath": "staticwebassets\\images\\menu_bg2.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\menu_bg3.gif",
+      "PackagePath": "staticwebassets\\images\\menu_bg3.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\menu_bgs.gif",
+      "PackagePath": "staticwebassets\\images\\menu_bgs.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\menu_topline.gif",
+      "PackagePath": "staticwebassets\\images\\menu_topline.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\minus.gif",
+      "PackagePath": "staticwebassets\\images\\minus.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\minus33.gif",
+      "PackagePath": "staticwebassets\\images\\minus33.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\na2.jpg",
+      "PackagePath": "staticwebassets\\images\\na2.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\nn.jpg",
+      "PackagePath": "staticwebassets\\images\\nn.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\nseererp11.jpg",
+      "PackagePath": "staticwebassets\\images\\nseererp11.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\onepice.jpg",
+      "PackagePath": "staticwebassets\\images\\onepice.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\plus.gif",
+      "PackagePath": "staticwebassets\\images\\plus.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\plus22.gif",
+      "PackagePath": "staticwebassets\\images\\plus22.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\regular.jpg",
+      "PackagePath": "staticwebassets\\images\\regular.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\return.jpg",
+      "PackagePath": "staticwebassets\\images\\return.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\school.jpg",
+      "PackagePath": "staticwebassets\\images\\school.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\security.gif",
+      "PackagePath": "staticwebassets\\images\\security.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\security1.gif",
+      "PackagePath": "staticwebassets\\images\\security1.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\sheet.gif",
+      "PackagePath": "staticwebassets\\images\\sheet.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\spacer.gif",
+      "PackagePath": "staticwebassets\\images\\spacer.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\t.jpg",
+      "PackagePath": "staticwebassets\\images\\t.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tab_inactive.jpg",
+      "PackagePath": "staticwebassets\\images\\tab_inactive.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tab_inactive1.jpg",
+      "PackagePath": "staticwebassets\\images\\tab_inactive1.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tableftF.gif",
+      "PackagePath": "staticwebassets\\images\\tableftF.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tableftJ.gif",
+      "PackagePath": "staticwebassets\\images\\tableftJ.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tabrightF.gif",
+      "PackagePath": "staticwebassets\\images\\tabrightF.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tabrightJ.gif",
+      "PackagePath": "staticwebassets\\images\\tabrightJ.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\top-unit.gif",
+      "PackagePath": "staticwebassets\\images\\top-unit.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\top-unit_副本.jpg",
+      "PackagePath": "staticwebassets\\images\\top-unit_副本.jpg"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_arrow_close.gif",
+      "PackagePath": "staticwebassets\\images\\tree_arrow_close.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_arrow_open.gif",
+      "PackagePath": "staticwebassets\\images\\tree_arrow_open.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_arrow_over.gif",
+      "PackagePath": "staticwebassets\\images\\tree_arrow_over.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_close.gif",
+      "PackagePath": "staticwebassets\\images\\tree_close.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_cd.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_cd.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_cdrom.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_cdrom.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_computer.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_computer.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_driver.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_driver.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_file.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_file.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_folder.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_folder.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_folder_close.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_folder_close.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_folder_open.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_folder_open.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_net.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_net.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_icon_recycler.gif",
+      "PackagePath": "staticwebassets\\images\\tree_icon_recycler.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tree_open.gif",
+      "PackagePath": "staticwebassets\\images\\tree_open.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_01.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_01.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_05.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_05.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_08.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_08.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_10.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_10.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_11.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_11.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_13.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_13.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_14.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_14.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_15.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_15.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_16.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_16.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_18.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_18.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_19.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_19.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_21.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_21.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_22.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_22.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_23.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_23.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_24.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_24.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_26.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_26.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_28.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_28.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_29.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_29.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_31.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_31.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_32.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_32.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_33.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_33.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\images\\tuopu_34.gif",
+      "PackagePath": "staticwebassets\\images\\tuopu_34.gif"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\axios\\dist\\axios.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\axios.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\element-plus\\dist\\index.css",
+      "PackagePath": "staticwebassets\\lib\\element-plus\\dist\\index.css"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\element-plus\\dist\\index.full.js",
+      "PackagePath": "staticwebassets\\lib\\element-plus\\dist\\index.full.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\.Net\\XM2\\UI\\wwwroot\\lib\\vue\\dist\\vue.global.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\dist\\vue.global.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.UI.props",
+      "PackagePath": "build\\UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.UI.props",
+      "PackagePath": "buildMultiTargeting\\UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.UI.props",
+      "PackagePath": "buildTransitive\\UI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,154 @@
+﻿<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+	<div id="app">
+		<el-scrollbar style="height: 672px;">
+		<el-text class="mx-1" type="info">您正在做的业务是：客户化设置-->人力资源档案管理设置-->公共属性设置</el-text><br />
+		<el-button type="success" v-on:click="Add()" style="margin-left:1200px">新增</el-button>
+		<el-table :data="tableData" style="width: 100%" :header-cell-style="{background:'#FFDB6F',color:'#606266'}">
+			<el-table-column prop="attribute_kind" label="属性种类" width="400"></el-table-column>
+			<el-table-column prop="attribute_name" label="属性名称" width="400"></el-table-column>
+			<el-table-column label="操作">
+				<template #default="scope">
+					<el-button type="danger" size="small" v-on:click="handleDelete(scope.row.pbc_id)">
+						删除
+					</el-button>
+				</template>
+			</el-table-column>
+
+		</el-table>
+		</el-scrollbar>
+
+		<el-dialog v-model="dialogVisibleAdd"
+				   title="公共属性添加"
+				   width="500">
+			<span>
+				<el-form ref="fAddForm" :model="fAdd" :rules="rules" label-width="auto" style="max-width: 750px">
+					<el-form-item label="属性种类" prop="attribute_kind">
+						<el-input v-model="fAdd.attribute_kind" />
+					</el-form-item>
+					<el-form-item label="属性名称" prop="attribute_name">
+						<el-input v-model="fAdd.attribute_name" />
+					</el-form-item>
+					<el-form-item>
+						<el-button type="info" v-on:click="dialogVisibleAdd = false" style="margin-left:333px">取消</el-button>
+						<el-button type="success" v-on:click="AddOk()">
+							添加
+						</el-button>
+					</el-form-item>
+				</el-form>
+
+			</span>
+
+		</el-dialog>
+
+	</div>
+</body>
+<script type="text/javascript">
+	const { createApp, ref, reactive, computed, watchEffect } = Vue;
+	var app = createApp({
+		setup() {
+			var tableData = ref([])
+			let dialogVisibleAdd = ref(false);
+			const uruleFormRefAdd = ref(null);
+
+			const fAdd = reactive({
+				attribute_kind: '',
+				attribute_name: '',
+			})
+
+			const rules = {
+				attribute_kind: [
+					{ required: true, message: '请输入属性种类', trigger: 'blur' },
+				],
+				attribute_name: [
+					{ required: true, message: '请输入属性名称', trigger: 'blur' },
+				]
+			}
+
+			function Fill() {
+				axios.get('/CPC/SelectAllCPC')
+					.then(res => {
+						tableData.value = res.data;
+					})
+					.catch(err => {
+						console.log(err);
+					})
+			}
+
+			Fill();
+
+			function handleDelete(pbc_id) {
+				if (confirm("确定删除")) {
+					axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+					axios.post('/CPC/DelCPC', {
+						id: pbc_id
+					}).then(res => {
+						if (res.data) {
+							Fill();
+							alert("删除成功")
+						}
+					}).catch(err => {
+						console.log(err);
+					})
+				}
+
+			}
+
+			function Add() {
+				dialogVisibleAdd.value = true;
+				fAdd.attribute_kind = ""
+				fAdd.attribute_name = ""
+			}
+
+			function AddOk() {
+				this.$refs.fAddForm.validate((valid) => {
+					if (valid) {
+						axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+						axios.put('/CPC/AddCPC', {
+							attribute_kind: fAdd.attribute_kind,
+							attribute_name: fAdd.attribute_name
+						}).then(res => {
+							if (res.data) {
+								alert("添加成功")
+								Fill();
+								dialogVisibleAdd.value = false;
+							}
+						}).catch(err => {
+							console.log(err);
+						})
+					} else {
+						return false;
+					}
+				})
+			}
+
+			return {
+				tableData,
+				dialogVisibleAdd,
+				uruleFormRefAdd,
+				fAdd,
+				handleDelete,
+				Add,
+				AddOk,
+				rules
+			}
+		}
+	})
+	app.use(ElementPlus);
+	app.mount("#app");
+</script>
+
+<style type="text/css">
+	body {
+		background-color: #FFFFBB;
+		border: 1px solid #FFDB6F;
+	}
+
+	el-table {
+		background-color: #FFFFBB;
+		overflow-y: auto;
+	}
+</style>

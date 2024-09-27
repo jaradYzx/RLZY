@@ -1,0 +1,680 @@
+﻿<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+    <div id="app">
+        <el-text class="mx-1" type="info">您正在做的业务是：招聘管理-->面试管理-->面试筛选</el-text><br />
+
+        <label><input type="radio" name="options" value="建议面试" v-model="selectedOption" v-on:change="handleOptionChange" style="margin-left:770px"> 建议面试</label>
+        <label><input type="radio" name="options" value="建议笔试" v-model="selectedOption" v-on:change="handleOptionChange"> 建议笔试</label>
+        <label><input type="radio" name="options" value="建议录用" v-model="selectedOption" v-on:change="handleOptionChange" checked> 建议录用</label>
+        <label><input type="radio" name="options" value="删除简历" v-model="selectedOption" v-on:change="handleOptionChange"> 删除简历</label>
+        &nbsp;&nbsp;
+        <el-button type="success" v-on:click="sx()">确定</el-button>
+        <el-button type="info" v-on:click="fh()" >返回</el-button>
+
+        <el-form ref="ZWFBDJ" class="ZWFBDJ" :model="fAdd" style="border: 1px solid black; width:1287px;height:609px">
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职位分类：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_major_kind_name" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职位名称：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_major_name" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;招聘类型：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.engage_type" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_name" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_sex" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMAIL：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_email" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_telephone" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家庭电话：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_homephone" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_mobilephone" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;住址：
+            </div>
+            <div>
+                <el-input class="zj" v-model="fAdd.human_address" style="width:483px;height:18px;" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮编：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_postcode" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国籍：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_nationality" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出生地：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_birthplace" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生日：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_birthday" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;民族：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_race" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宗教信仰：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_religion" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;政治面貌：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_party" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;身份证号码：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_idcard" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年龄：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_age" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业院校：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_college" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学历：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_educated_degree" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;教育年限：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_educated_years" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专业：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_educated_major" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;薪酬要求：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.demand_salary_standard" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册时间：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.regist_time" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特长：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_specility" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱好：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_hobby" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;推荐人：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.checker" readonly></el-input>
+            </div>
+
+            <div class="tt">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;推荐时间：
+            </div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.check_time" readonly></el-input>
+            </div>
+
+            <div class="yq">
+                <el-form-item class="gg" label="个人履历："></el-form-item>
+            </div>
+            <div class="qp">
+                <el-input v-model="fAdd.human_history_records" :rows="3" type="textarea" readonly></el-input>
+            </div>
+
+            <div class="yq">
+                <el-form-item class="gg" label="备注："></el-form-item>
+            </div>
+            <div class="qp">
+                <el-input v-model="fAdd.remark" :rows="3" type="textarea" readonly></el-input>
+            </div>
+
+            <div class="yq">
+                <el-form-item class="gg" label="推荐意见："></el-form-item>
+            </div>
+            <div class="qp">
+                <el-input v-model="fAdd.recomandation" :rows="3" type="textarea" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="面试次数："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.interview_amount" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="形象评价："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.image_degree" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="口才评价："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.native_language_degree" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="对外口语能力："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.foreign_language_degree" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="vv">
+                <el-form-item class="vb" label="应变能力："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.response_speed_degree" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="EQ："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.eQ_degree" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="IQ："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.iQ_degree" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="综合素质："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.multi_quality_degree" readonly></el-input>
+            </div>
+
+            <br />
+
+            <div class="vv">
+                <el-form-item class="vb" label="面试人："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.register" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="面试时间："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="fff.registe_time" readonly></el-input>
+            </div>
+            
+            <div class="vv">
+                <el-form-item class="vb" label="筛选人："></el-form-item>
+            </div>
+            <div class="ez">
+                <el-input class="ez" v-model="zsname" readonly></el-input>
+            </div>
+
+            <div class="vv">
+                <el-form-item class="vb" label="筛选时间："></el-form-item>
+            </div>
+            <div class="ez">
+
+                <el-input class="ez" v-model="currentTimeStr" size="large" style="width: 180px" readonly></el-input>
+            </div>
+
+
+            <br />
+
+
+            <div class="yq">
+                <el-form-item class="gx" label="面试意见："></el-form-item>
+            </div>
+            <div class="qp">
+                <el-input v-model="selectedOption" :rows="3" type="textarea" readonly></el-input>
+            </div>
+
+        </el-form>
+
+
+    </div>
+</body>
+<script type="text/javascript">
+    const { createApp, ref, reactive, computed, watchEffect, onMounted, onUnmounted } = Vue;
+    var app = createApp({
+        setup() {
+
+            var fff = reactive({
+                ein_id: '',
+                human_name: '',
+                interview_amount: '1',
+                human_major_kind_id: '',
+                human_major_kind_name: '',
+                human_major_id: '',
+                human_major_name: '',
+                image_degree: '',
+                native_language_degree: '',
+                foreign_language_degree: '',
+                response_speed_degree: '',
+                EQ_degree: '',
+                IQ_degree: '',
+                multi_quality_degree: '',
+                register: '',
+                checker: '',
+                registe_time: '',
+                check_time: '',
+                resume_id: '',
+                result: '',
+                interview_comment: '',
+                check_comment: '',
+                interview_status: '',
+                check_status: '',
+            })
+
+
+            var fAdd = reactive({
+                res_id: '',
+                human_name: '',
+                engage_type: '',
+                human_address: '',
+                human_postcode: '',
+                human_major_kind_id: '',
+                human_major_kind_name: '',
+                human_major_id: '',
+                human_major_name: '',
+                human_telephone: '',
+                human_homephone: '',
+                human_mobilephone: '',
+                human_email: '',
+                human_hobby: '',
+                human_specility: '',
+                human_sex: '',
+                human_religion: '',
+                human_party: '',
+                human_nationality: '',
+                human_race: '',
+                human_birthday: '',
+                human_age: '',
+                human_educated_degree: '',
+                human_educated_years: '',
+                human_educated_major: '',
+                human_college: '',
+                human_idcard: '',
+                human_birthplace: '',
+
+                demand_salary_standard: '',
+                human_history_records: '',
+                remark: '',
+                recomandation: '',
+                human_picture: '',
+                attachment_name: '',
+                check_status: '',
+                register: '',
+                regist_time: '',
+                checker: '',
+                check_time: '',
+                interview_status: '',
+                total_points: '',
+                test_amount: '',
+                test_checker: '',
+                test_check_time: '',
+                pass_register: '',
+                pass_regist_time: '',
+                pass_checker: '',
+                pass_check_time: '',
+                pass_check_status: '',
+                pass_checkComment: '',
+                pass_passComment: '',
+            })
+
+            const fetchData = () => {
+                const responseDataString = sessionStorage.getItem('MSSX');
+                if (responseDataString) {
+                    const responseDataArray = JSON.parse(responseDataString);
+                    fff = responseDataArray;
+                    // console.log(1)
+                    // console.log(fff)
+                    // console.log(2)
+                } else {
+                    console.log("未找到存储的值");
+                }
+            };
+            fetchData();
+
+            const feee = () => {
+                axios.get('/ER/SelectERById', {
+                    params: {
+                        id: fff.resume_id,
+                    }
+                })
+                    .then(res => {
+                        // console.log(res.data);
+                        // fAdd = res.data;
+                        // Object.assign(fAdd, res.data);
+                        for (const key in res.data) {
+                            if (res.data.hasOwnProperty(key) && fAdd.hasOwnProperty(key)) {
+                                fAdd[key] = res.data[key];
+                            }
+                        }
+                    }).catch(err => {
+                        console.log(err)
+                    })
+            };
+            feee();
+
+
+            const zsname = ref("");
+            const fename = () => {
+                const responseDataString = sessionStorage.getItem('User');
+                if (responseDataString) {
+                    const responseDataArray = JSON.parse(responseDataString);
+                    zsname.value = responseDataArray.uTrueName;
+                } else {
+                    console.log("未找到存储的值");
+                }
+            };
+            fename();
+
+            const currentTimeStr = ref('');
+
+            function updateCurrentTime() {
+                const now = new Date();
+                // 转换为本地时间并格式化
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份从0开始，所以加1
+                const day = String(now.getDate()).padStart(2, '0');
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                currentTimeStr.value = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+            }
+
+            onMounted(() => {
+                const timer = setInterval(updateCurrentTime, 1000);
+
+                onUnmounted(() => {
+                    clearInterval(timer);
+                });
+                updateCurrentTime(); // 初始化显示当前时间
+            });
+
+
+            function sx() {
+                fff.checker = zsname.value
+                fff.check_time = currentTimeStr.value
+
+                console.log(fff)
+
+                // 筛选操作     
+                if (confirm("请确定数据填写完全")) {
+
+                    axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                    axios.put('/EI/UpdEMR', {
+                        ein_id: fff.ein_id,
+                        human_name: fff.human_name,
+                        interview_amount: fff.interview_amount,
+                        human_major_kind_id: fff.human_major_kind_id,
+                        human_major_kind_name: fff.human_major_kind_name,
+                        human_major_id: fff.human_major_id,
+                        human_major_name: fff.human_major_name,
+                        image_degree: fff.image_degree,
+                        native_language_degree: fff.native_language_degree,
+                        foreign_language_degree: fff.foreign_language_degree,
+                        response_speed_degree: fff.response_speed_degree,
+                        EQ_degree: fff.eQ_degree,
+                        IQ_degree: fff.iQ_degree,
+                        multi_quality_degree: fff.multi_quality_degree,
+                        register: fff.register,
+                        checker: fff.checker,
+                        registe_time: fff.registe_time,
+                        check_time: fff.check_time,
+                        resume_id: fff.resume_id,
+                        result: fff.result,
+                        interview_comment: fff.interview_comment,
+                        check_comment: fff.check_comment,
+                        interview_status: fff.interview_status,
+                        check_status: fff.check_status,
+                    }).then(res => {
+                        console.log(res)
+                        alert("筛选完成")
+                        window.location.href = '/EI/LYSQCX'
+                    }).catch(err => {
+                        console.log(err)
+                        alert("筛选失败")
+                    })
+
+                }
+
+            }
+
+            var selectedOption = ref('建议录用')
+
+            function handleOptionChange() {
+                fff.check_status = 3;
+                if (selectedOption.value == "建议面试") {
+                    fff.check_status = 1;
+                }
+                else if (selectedOption.value == "建议笔试") {
+                    fff.check_status = 2;
+                }
+                else if (selectedOption.value == "建议录用") {
+                    fff.check_status = 3;
+                }
+                else if (selectedOption.value == "删除简历") {
+                    fff.check_status = 4;
+                }
+            }
+            
+            function fh() 
+            {
+                window.location.href = '/EI/MSSXCX';
+            }
+
+            handleOptionChange()
+
+            return {
+                fAdd,
+                fff,
+                sx,
+                zsname,
+                currentTimeStr,
+                fh,
+                selectedOption,
+                handleOptionChange,
+            }
+        }
+    })
+    app.use(ElementPlus);
+    app.mount("#app");
+</script>
+
+<style type="text/css">
+    body {
+        background-color: #FFFFBB;
+        border: 1px solid #FFDB6F;
+    }
+
+    el-table {
+        background-color: #FFFFBB;
+    }
+
+    .ZWFBDJ::after {
+        display: table;
+        clear: both;
+    }
+
+    .ZWFBDJ > div {
+        border: 1px solid black;
+        float: left;
+    }
+
+    .tt {
+        height: 18px;
+        width: 120px;
+        background-color: #FFDB6F;
+    }
+
+    .zj {
+        height: 18px;
+        width: 180px;
+    }
+
+    .gg {
+        margin-left: 28px;
+        margin-top: 20px;
+    }
+    
+    .gx {
+        margin-top: 20px;
+    }
+
+    .yq {
+        height: 73px;
+        width: 120px;
+        background-color: #FFDB6F;
+    }
+
+    .qp {
+        width: 1163px;
+        height: 73px;
+    }
+
+    .vv {
+        height: 40px;
+        width: 120px;
+        background-color: #FFDB6F;
+    }
+
+    .vb {
+        margin-left: 25px;
+        margin-top: 5px;
+    }
+
+    .ez {
+        height: 40px;
+        width: 180px;
+    }
+
+</style>

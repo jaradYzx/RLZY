@@ -1,0 +1,124 @@
+﻿
+<script src="~/lib/vue/dist/vue.global.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<title>登录</title>
+<div id="app">
+    <table cellspacing=0 cellpadding=0 width=900 align=center border=0>
+        <tbody>
+            <tr>
+                <td style="height: 105px">
+                    <img src="~/images/login_11.gif" border=0>
+                </td>
+            </tr>
+            <tr>
+                <td background=@Url.Content("~/images/login_22.jpg") height=300>
+                    <table height=300 cellpadding=0 width=900 border=0>
+                        <tbody>
+                            <tr>
+                                <td colspan=2 height=35></td>
+                            </tr>
+                            <tr>
+                                <td width=360></td>
+                                <td>
+                                    <table cellspacing=0 cellpadding=2 border=0>
+                                        <el-form :rules="rules" ref="form" :model="from" label-width="80px">
+                                            <el-form-item label="用户名:" prop="name">
+                                                <el-input v-model="from.name" style="width: 200px;"></el-input>
+                                            </el-form-item>
+                                            <el-form-item label=" 密 码: " prop="pwd">
+                                                <el-input v-model="from.pwd" style="width: 200px;" type="password"></el-input>
+                                            </el-form-item>
+                                            <el-form-item>
+                                                <el-button type="primary" v-on:click="onSubmit" class="card-with-background3">登录</el-button>
+                                            </el-form-item>
+                                        </el-form>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="@Url.Content("~/images/login_33.jpg")" border=0>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    var { createApp, reactive, ref } = Vue
+    var app = createApp({
+        setup() {
+            let from = reactive({
+                name: "",
+                pwd: ""
+            })
+            function onSubmit() {
+                axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                axios.post('/User/GetUser', {
+                    UName: from.name,
+                    UPassWord: from.pwd,
+                }).then(function (response) {
+                    if (response.data != null) {
+                        sessionStorage.setItem('User', JSON.stringify(response.data));
+                        window.location.href = "/Select/Index";
+                    } else {
+                        open();
+                    }
+
+                })
+
+            }
+            function open() {
+                ElementPlus.ElNotification({
+                    title: '消息提示',
+                    type: 'error',
+                    dangerouslyUseHTMLString: true, 
+                    message: '<hr/>用户名或者密码不正确！',
+                    position: 'bottom-right'
+                })
+                from.name=""
+                from.pwd=""
+            }
+            const rules = {
+                name: [
+                    { required: true, message: '请输入用户名', trigger: 'blur' },
+                ],
+                pwd: [
+                    { required: true, message: '请输入密码', trigger: 'blur' },
+                ]
+            };
+            return {
+                rules,
+                from,
+                onSubmit
+            }
+        }
+    })
+    app.use(ElementPlus)
+    app.mount("#app")
+</script>
+<style>
+    .card-with-background {
+        background-image: url('/images/2.png');
+        height: 500; /* 或者你需要的任何高度 */
+        border: 1px solid white;
+        margin: 0px 402px 0px 402px;
+    }
+
+    .card-with-background2 {
+        margin: 200px 300px 100px 350px;
+    }
+
+    .card-with-background3 {
+        margin: 0px 0px 0px 140px;
+    }
+</style>
+
+
+
+       

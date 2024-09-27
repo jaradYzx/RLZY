@@ -1,0 +1,938 @@
+﻿<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+    <div id="app">
+        <el-text class="mx-1" type="info">您正在做的业务是：招聘管理-->简历管理-->简历登记</el-text><br /><br />
+
+        <el-form ref="ZWFBDJ" class="ZWFBDJ" :model="fAdd" style="border: 1px solid black; width:1287px;height:523px">
+
+            <div class="tt">
+				<el-form-item class="wz" label="职位分类："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="xxx.major_kind_name"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options1"
+                               :key="item.mfk_id"
+                               :label="item.major_kind_name"
+                               :value="item.major_kind_id+item.major_kind_name" />
+                </el-select>
+            </div>
+
+            <div class="tt">
+                <el-form-item class="wz" label="职位名称："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="xxx.major_name"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj"
+                           v-on:click="zwfl()">
+                    <el-option v-for="item in options2"
+                               :key="item.major_id"
+                               :label="item.major_name"
+                               :value="item.major_id+item.major_name" />
+                </el-select>
+            </div>
+
+			<div class="tt">
+                <el-form-item class="wz" label="招聘类型："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="xxx.engage_type"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options3"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+            </div>
+            <br />
+            <br />
+            <div class="tt">
+                <el-form-item class="wz" label="姓名："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-input class="zj" v-model="fAdd.human_name" placeholder="请输入姓名"></el-input>
+            </div>
+                
+
+			<div class="tt">
+                <el-form-item class="wz" label="性别："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-input class="zj" v-model="xb" readonly></el-input>
+            </div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="EMAIL："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-input class="zj" v-model="fAdd.human_email" placeholder="请输入EMAIL"></el-input>
+			</div>
+            <br />
+            <br />
+			<div class="tt">
+                <el-form-item class="wz" label="电话："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-input class="zj" v-model="fAdd.human_telephone" placeholder="请输入电话"></el-input>
+			</div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="家庭电话："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-input class="zj" v-model="fAdd.human_homephone" placeholder="请输入家庭电话"></el-input>
+			</div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="手机："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-input class="zj" v-model="fAdd.human_mobilephone" placeholder="请输入手机"></el-input>
+			</div>
+            <br />
+            <br />
+			<div class="tt">
+                <el-form-item class="wz" label="住址："></el-form-item>
+			</div>
+			<div >
+                <el-input v-model="fAdd.human_address" placeholder="请输入住址" style="width:483px;height:40px;"></el-input>
+			</div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="邮编："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-input class="zj" v-model="fAdd.human_postcode" placeholder="请输入邮编"></el-input>
+			</div>
+            <br />
+            <br />
+			<div class="tt">
+                <el-form-item class="wz" label="国籍："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-select v-model="fAdd.human_nationality"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options5"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="出生地："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_birthplace" readonly></el-input>
+			</div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="生日："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_birthday" readonly></el-input>
+			</div>
+            <br />
+            <br />
+			<div class="tt">
+                <el-form-item class="wz" label="民族："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-select v-model="fAdd.human_race"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options6"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="宗教信仰："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-select v-model="fAdd.human_religion"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options7"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+				
+            
+			<div class="tt">
+                <el-form-item class="wz" label="政治面貌："></el-form-item>
+			</div>
+			<div class="zj">
+                <el-select v-model="fAdd.human_party"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options8"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+            <br />
+            <br />
+            <div class="tt">
+                <el-form-item class="wz" label="身份证号码："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_idcard" placeholder="请输入身份证号码" v-on:blur="calculateAge"></el-input>
+			</div>
+
+
+            <div class="tt">
+                <el-form-item class="wz" label="年龄："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.human_age" readonly></el-input>
+			</div>
+
+
+            <div class="tt">
+                
+                <el-form-item class="wz" label="毕业院校："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="fAdd.human_college"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options14"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+
+
+            <div class="tt">
+                <el-form-item class="wz" label="学历："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="fAdd.human_educated_degree"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options9"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+            <br />
+            <br />
+            <div class="tt">
+                <el-form-item class="wz" label="教育年限："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="fAdd.human_educated_years"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options10"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+
+
+            <div class="tt">
+                <el-form-item class="wz" label="专业："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="fAdd.human_educated_major"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options11"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+
+
+            <div class="tt">
+                <el-form-item class="wz" label="薪酬要求："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-input class="zj" v-model="fAdd.demand_salary_standard" placeholder="请输入薪酬要求"></el-input>
+			</div>
+				
+
+            <div class="tt">
+                <el-form-item class="wz" label="注册时间："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-input class="zj" v-model="currentTimeStr" readonly></el-input>
+			</div>
+            <br />
+            <br />
+            <div class="tt">
+                <el-form-item class="wz" label="特长："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="fAdd.human_specility"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options12"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+			</div>
+                
+
+            <div class="tt">
+                <el-form-item class="wz" label="爱好："></el-form-item>
+			</div>
+            <div class="zj">
+                <el-select v-model="fAdd.human_hobby"
+                           placeholder="--请选择--"
+                           size="large"
+                           class="zj">
+                    <el-option v-for="item in options13"
+                               :key="item.pbc_id"
+                               :label="item.attribute_name"
+                               :value="item.attribute_name" />
+                </el-select>
+            </div>
+            <div class="tt">
+            </div>
+            <div class="zj">
+            </div>
+
+            <div class="tt">
+            </div>
+            <div class="zj">
+            </div>
+            <div class="yq">
+                <el-form-item class="gg" label="个人履历："></el-form-item>
+			</div>
+            <div class="qp">
+                <el-input v-model="fAdd.human_history_records" :rows="3" type="textarea" placeholder="请输入个人履历"></el-input>
+			</div>
+                
+            <div class="yq">
+                <el-form-item class="gg" label="备注："></el-form-item>
+			</div>
+			<div class="qp">
+                <el-input v-model="fAdd.remark" :rows="3" type="textarea" placeholder="请输入备注"></el-input>
+			</div>
+                
+
+        </el-form>
+
+        <el-button type="info" v-on:click="qk()" style="margin-left:1100px">清空</el-button>
+        <el-button type="success" v-on:click="Add()">提交</el-button>
+
+
+    </div>
+</body>
+<script type="text/javascript">
+    const { createApp, ref, reactive, computed, watchEffect, onMounted, onUnmounted } = Vue;
+    var app = createApp({
+        setup() {
+            const zsname = ref("");
+            const fename = () => {
+                const responseDataString = sessionStorage.getItem('User');
+                if (responseDataString) {
+                    const responseDataArray = JSON.parse(responseDataString);
+                    zsname.value = responseDataArray.uTrueName
+                } else {
+                    console.log("未找到存储的值");
+                }
+            };
+            fename();
+
+            var xxx = reactive({
+                mre_id: '',
+                first_kind_id: '',
+                first_kind_name: '',
+                second_kind_id: '',
+                second_kind_name: '',
+                third_kind_id: '',
+                third_kind_name: '',
+                major_kind_id: '',
+                major_kind_name: '',
+                major_id: '',
+                major_name: '',
+                human_amount: '',
+                engage_type: '',
+                deadline: '',
+                register: '',
+                changer: '',
+                registTime: '',
+                changeTime: '',
+                major_describe: '',
+                engage_required: '',
+            })
+
+            const fetchData = () => {
+                const responseDataString = sessionStorage.getItem('ZW');
+                if (responseDataString) {
+                    const responseDataArray = JSON.parse(responseDataString);
+                    xxx = responseDataArray
+                    console.log(xxx)
+                } else {
+                    console.log("未找到存储的值");
+                }
+            };
+            fetchData();
+
+            const fAdd = reactive({
+                res_id: '',
+                human_name: '',
+                engage_type: '',
+                human_address: '',
+                human_postcode: '',
+                human_major_kind_id: '',
+                human_major_kind_name: '',
+                human_major_id: '',
+                human_major_name: '',
+                human_telephone: '',
+                human_homephone: '',
+                human_mobilephone: '',
+                human_email: '',
+                human_hobby: '',
+                human_specility: '',
+                human_sex: '',
+                human_religion: '',
+                human_party: '',
+                human_nationality: '',
+                human_race: '',
+                human_birthday: '',
+                human_age: '',
+                human_educated_degree: '',
+                human_educated_years: '',
+                human_educated_major: '',
+                human_college: '',
+                human_idcard: '',
+                human_birthplace: '',
+
+                demand_salary_standard: '',
+                human_history_records: '',
+                remark: '',
+                recomandation: '',
+                human_picture: '',
+                attachment_name: '',
+                check_status: '',
+                register: '',
+                regist_time: '',
+                checker: '',
+                check_time: '',
+                interview_status: '',
+                total_points: '',
+                test_amount: '',
+                test_checker: '',
+                test_check_time: '',
+                pass_register: '',
+                pass_regist_time: '',
+                pass_checker: '',
+                pass_check_time: '',
+                pass_check_status: '',
+                pass_checkComment: '',
+                pass_passComment: '',
+            })
+
+
+           
+
+            const options1 = ref();
+            const options2 = ref();
+            const options3 = ref();
+            var xb = ref();
+            const options4 = ref([
+                { value: '女', label: '0' },
+                { value: '男', label: '1' },
+            ]);
+            const options5 = ref();
+            const options6 = ref();
+            const options7 = ref();
+            const options8 = ref();
+            const options9 = ref();
+            const options10 = ref();
+            const options11 = ref();
+            const options12 = ref();
+            const options13 = ref();
+            const options14 = ref();
+           
+
+            //职位分类下拉框
+            axios.get('/CMK/SelectAllCMK')
+                .then(res => {
+                    options1.value = res.data
+                })
+
+            function zwfl() {
+                str1 = xxx.major_kind_name
+                ffid1 = str1.substring(0, 2);
+                ffname1 = str1.substring(2);
+                fAdd.human_major_kind_id = ffid1
+                fadd.human_major_kind_name = ffname1
+                //联动级联
+                axios.get('/CM/SeleteZWMC', {
+                    params: {
+                        x: ffname1
+                    }
+                }).then(res => {
+                    options2.value = res.data
+                })
+            }
+
+            //招聘类型下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '招聘类型'
+                }
+            }).then(res => {
+                options3.value = res.data
+            })
+
+            //国籍下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '国籍'
+                }
+            }).then(res => {
+                options5.value = res.data
+            })
+            
+            //民族下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '民族'
+                }
+            }).then(res => {
+                options6.value = res.data
+            })
+            
+            //宗教信仰下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '宗教信仰'
+                }
+            }).then(res => {
+                options7.value = res.data
+            })
+            
+            //政治面貌下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '政治面貌'
+                }
+            }).then(res => {
+                options8.value = res.data
+            })
+            
+            //学历下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '学历'
+                }
+            }).then(res => {
+                options9.value = res.data
+            })
+            
+            //教育年限下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '教育年限'
+                }
+            }).then(res => {
+                options10.value = res.data
+            })
+            
+            //专业下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '专业'
+                }
+            }).then(res => {
+                options11.value = res.data
+            })
+            
+            //特长下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '特长'
+                }
+            }).then(res => {
+                options12.value = res.data
+            })
+            
+            //爱好下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '爱好'
+                }
+            }).then(res => {
+                options13.value = res.data
+            })
+            
+            //毕业院校下拉框
+            axios.get('/CPC/SeleteGGSX', {
+                params: {
+                    x: '毕业院校'
+                }
+            }).then(res => {
+                options14.value = res.data
+            })
+
+            function calculateAge() {
+                const idcard = fAdd.human_idcard;
+                if (!idcard || idcard.length !== 18) return;
+
+                var sz = idcard[16];
+
+                if (sz % 2 == 0) {
+                    xb.value = '女'
+                } else {
+                    xb.value = '男'
+                }
+
+                const birthYear = idcard.substring(6, 10);
+                const birthMonth = idcard.substring(10, 12);
+                const birthDay = idcard.substring(12, 14);
+
+                const birthDate = new Date(`${birthYear}-${birthMonth}-${birthDay}`);
+                const today = new Date();
+
+                const srsj = `${birthYear}-${birthMonth}-${birthDay} 00:00:00`;
+                fAdd.human_birthday = srsj
+
+                const provinceCodes = {
+                    '11': '北京市',
+                    '12': '天津市',
+                    '13': '河北省',
+                    '14': '山西省',
+                    '15': '内蒙古自治区',
+                    '21': '辽宁省',
+                    '22': '吉林省',
+                    '23': '黑龙江省',
+                    '31': '上海市',
+                    '32': '江苏省',
+                    '33': '浙江省',
+                    '34': '安徽省',
+                    '35': '福建省',
+                    '36': '江西省',
+                    '37': '山东省',
+                    '41': '河南省',
+                    '42': '湖北省',
+                    '43': '湖南省',
+                    '44': '广东省',
+                    '45': '广西壮族自治区',
+                    '46': '海南省',
+                    '50': '重庆市',
+                    '51': '四川省',
+                    '52': '贵州省',
+                    '53': '云南省',
+                    '54': '西藏自治区',
+                    '61': '陕西省',
+                    '62': '甘肃省',
+                    '63': '宁夏回族自治区',
+                    '64': '青海省',
+                    '65': '新疆维吾尔自治区',
+                    '71': '台湾省',
+                    '81': '香港特别行政区',
+                    '82': '澳门特别行政区'
+                };
+                const sf = idcard.substring(0, 2);
+                fAdd.human_birthplace = provinceCodes[sf] || '未知的省份代码';
+
+
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const m = today.getMonth() - birthDate.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                fAdd.human_age = age;
+            }
+
+            const currentTimeStr = ref('');
+
+            function updateCurrentTime() {
+                const now = new Date();
+                // 转换为本地时间并格式化
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份从0开始，所以加1
+                const day = String(now.getDate()).padStart(2, '0');
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                currentTimeStr.value = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+            }
+
+            onMounted(() => {
+                const timer = setInterval(updateCurrentTime, 1000);
+
+                onUnmounted(() => {
+                    clearInterval(timer);
+                });
+                updateCurrentTime(); // 初始化显示当前时间
+            });
+
+            function Add() {
+                fAdd.human_major_kind_id = xxx.major_kind_id
+                fAdd.human_major_kind_name = xxx.major_kind_name
+                fAdd.human_major_id = xxx.major_id
+                fAdd.human_major_name = xxx.major_name
+                fAdd.engage_type = xxx.engage_type
+                fAdd.human_sex = xb.value;
+                fAdd.register = zsname.value;
+                fAdd.regist_time = currentTimeStr.value;
+                if (confirm("请确定数据填写完全")) {
+                    console.log(xxx);
+                    console.log(fAdd);
+                    axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                    axios.put('/ER/AddER', {
+                        human_name: fAdd.human_name,
+                        engage_type: fAdd.engage_type,
+                        human_address: fAdd.human_address,
+                        human_postcode: fAdd.human_postcode,
+                        human_major_kind_id: fAdd.human_major_kind_id,
+                        human_major_kind_name: fAdd.human_major_kind_name,
+                        human_major_id: fAdd.human_major_id,
+                        human_major_name: fAdd.human_major_name,
+                        human_telephone: fAdd.human_telephone,
+                        human_homephone: fAdd.human_homephone,
+                        human_mobilephone: fAdd.human_mobilephone,
+                        human_email: fAdd.human_email,
+                        human_hobby: fAdd.human_hobby,
+                        human_specility: fAdd.human_specility,
+                        human_sex: fAdd.human_sex,
+                        human_religion: fAdd.human_religion,
+                        human_party: fAdd.human_party,
+                        human_nationality: fAdd.human_nationality,
+                        human_race: fAdd.human_race,
+                        human_birthday: fAdd.human_birthday,
+                        human_age: fAdd.human_age,
+                        human_educated_degree: fAdd.human_educated_degree,
+                        human_educated_years: fAdd.human_educated_years,
+                        human_educated_major: fAdd.human_educated_major,
+                        human_college: fAdd.human_college,
+                        human_idcard: fAdd.human_idcard,
+                        human_birthplace: fAdd.human_birthplace,
+                        demand_salary_standard: fAdd.demand_salary_standard,
+                        human_history_records: fAdd.human_history_records,
+                        remark: fAdd.remark,
+                        register: fAdd.register,
+                        regist_time: fAdd.regist_time,
+                        recomandation: '未审核',
+                        interview_status: 1,
+                    }).then(res => {
+                        if (res.data) {
+                            alert("添加成功");
+                            qk();
+
+                            if (xxx.human_amount > 1) {
+                                //减少一个求职人数
+                                axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                                axios.put('/EMR/UpdEMR', {
+                                    mre_id: xxx.mre_id,
+                                    first_kind_id: xxx.first_kind_id,
+                                    first_kind_name: xxx.first_kind_name,
+                                    second_kind_id: xxx.second_kind_id,
+                                    second_kind_name: xxx.second_kind_name,
+                                    third_kind_id: xxx.third_kind_id,
+                                    third_kind_name: xxx.third_kind_name,
+                                    major_kind_id: xxx.major_kind_id,
+                                    major_kind_name: xxx.major_kind_name,
+                                    major_id: xxx.major_id,
+                                    major_name: xxx.major_name,
+                                    human_amount: xxx.human_amount-1,
+                                    engage_type: xxx.engage_type,
+                                    deadline: xxx.deadline,
+                                    register: xxx.register,
+                                    changer: xxx.changer,
+                                    registTime: xxx.registTime,
+                                    changeTime: xxx.changeTime,
+                                    major_describe: xxx.major_describe,
+                                    engage_required: xxx.engage_required,
+                                    status: 1,
+                                }).then(res => {
+                                    console.log(res);
+                                }).catch(err => {
+                                    console.log(err);
+                                })
+                            } else {
+                                //修改职位发布登记表状态（求职人已满，不可再申请职位）
+                                axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                                axios.put('/EMR/UpdEMR', {
+                                    mre_id: xxx.mre_id,
+                                    first_kind_id: xxx.first_kind_id,
+                                    first_kind_name: xxx.first_kind_name,
+                                    second_kind_id: xxx.second_kind_id,
+                                    second_kind_name: xxx.second_kind_name,
+                                    third_kind_id: xxx.third_kind_id,
+                                    third_kind_name: xxx.third_kind_name,
+                                    major_kind_id: xxx.major_kind_id,
+                                    major_kind_name: xxx.major_kind_name,
+                                    major_id: xxx.major_id,
+                                    major_name: xxx.major_name,
+                                    human_amount: 0,
+                                    engage_type: xxx.engage_type,
+                                    deadline: xxx.deadline,
+                                    register: xxx.register,
+                                    changer: xxx.changer,
+                                    registTime: xxx.registTime,
+                                    changeTime: xxx.changeTime,
+                                    major_describe: xxx.major_describe,
+                                    engage_required: xxx.engage_required,
+                                    status: 2,
+                                }).then(res => {
+                                    console.log(res);
+                                }).catch(err => {
+                                    console.log(err);
+                                })
+                            }
+
+                            window.location.href = '/ER/JLSX'
+                        }
+                    }).catch(err => {
+                        console.log(err);
+                        alert("添加失败");
+                    })
+                }
+
+            }
+
+            function qk() {
+                fAdd.human_name = "";
+                xb.value = "";
+                fAdd.human_email = "";
+                fAdd.human_telephone = "";
+                fAdd.human_homephone = "";
+                fAdd.human_mobilephone = "";
+                fAdd.human_address = "";
+                fAdd.human_postcode = "";
+                fAdd.human_nationality = "";
+                fAdd.human_birthplace = "";
+                fAdd.human_birthday = "";
+                fAdd.human_race = "";
+                fAdd.human_religion = "";
+                fAdd.human_party = "";
+                fAdd.human_idcard = "";
+                fAdd.human_age = "";
+                fAdd.human_college = "";
+                fAdd.human_educated_degree = "";
+                fAdd.human_educated_years = "";
+                fAdd.human_educated_major = "";
+                fAdd.demand_salary_standard = "";
+                fAdd.human_specility = "";
+                fAdd.human_hobby = "";
+                fAdd.human_history_records = "";
+                fAdd.remark = "";
+            }
+
+            return {
+                fAdd,
+                xxx,
+                options1,
+                options2,
+                options3,
+                options4,
+                options5,
+                options6,
+                options7,
+                options8,
+                options9,
+                options10,
+                options11,
+                options12,
+                options13,
+                options14,
+                xb,
+                zwfl,
+                currentTimeStr,
+                Add,
+                qk,
+                calculateAge,
+            }
+        }
+    })
+    app.use(ElementPlus);
+    app.mount("#app");
+</script>
+
+<style type="text/css">
+    body {
+        background-color: #FFFFBB;
+        border: 1px solid #FFDB6F;
+    }
+
+    el-table {
+        background-color: #FFFFBB;
+    }
+
+    .ZWFBDJ::after {
+        content: "";
+        display: table;
+        clear: both; 
+    }
+
+        .ZWFBDJ > div {
+            border: 1px solid black;
+        float: left;
+    }
+
+    .tt{
+        height:40px;
+        width: 120px;
+        background-color: #FFDB6F;
+    }
+
+    .zj{
+        height: 40px;
+        width: 180px;
+    }
+
+    .wz {
+        margin-left: 25px;
+        margin-top: 5px;
+    }
+
+    .gg {
+        margin-left: 28px;
+        margin-top: 20px;
+    }
+
+    .yq {
+        height: 73;
+        width: 120px;
+    }
+
+    .qp{
+        width:1163px;
+        height:73px;
+    }
+</style>

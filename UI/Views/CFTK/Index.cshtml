@@ -1,0 +1,443 @@
+﻿
+<script src="~/lib/vue/dist/vue.global.js"></script>
+<link href="~/lib/element-plus/dist/index.css" rel="stylesheet" />
+<script src="~/lib/element-plus/dist/index.full.js"></script>
+<script src="~/lib/axios/dist/axios.js"></script>
+<body>
+    <div id="app">
+        <el-scrollbar style="height: 672px;">
+        <el-text class="mx-1" type="info">您正在做的业务是：客户化设置-->人力资源档案管理设置-->III级机构设置</el-text><br />
+        <el-button type="success" v-on:click="Add()" style="margin-left:1200px">新增</el-button>
+        <el-table :data="tableData" style="width: 100%" :header-cell-style="{background:'#FFDB6F',color:'#606266'}">
+			<el-table-column prop="first_kind_name" label="I级机构名称" width="200"></el-table-column>
+			<el-table-column prop="second_kind_name" label="II级机构名称" width="200"></el-table-column>
+            <el-table-column prop="second_kind_id" label="II级机构编号" width="120"></el-table-column>
+            <el-table-column prop="third_kind_name" label="III级机构名称" width="200"></el-table-column>
+            <el-table-column prop="third_kind_sale_id" label="销售责任人编号" width="150"></el-table-column>
+            <el-table-column prop="third_kind_is_retail" label="是否为零售店" width="150">
+                <template #default="scope">
+                    <span v-if="scope.row.third_kind_is_retail==0">是</span>
+                    <span v-if="scope.row.third_kind_is_retail==1">否</span>
+                </template>
+            </el-table-column>
+            <el-table-column label="操作">
+                <template #default="scope">
+                    <el-button type="primary" size="small" v-on:click="handleEdit(scope.row)">
+                        修改
+                    </el-button>
+                    <el-button type="danger" size="small" v-on:click="handleDelete(scope.row.ftk_id)">
+                        删除
+                    </el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+        </el-scrollbar>
+    
+
+        <el-dialog v-model="dialogVisibleAdd"
+                   title="III级机构添加"
+                   width="500">
+            <span>
+                <el-form ref="fAddForm" :model="uformAdd" :rules="rules" label-width="auto" style="max-width: 750px">
+                    <el-form-item label="I级机构名称" prop="first_kind_name">
+                        <el-select v-model="uformAdd.first_kind_name"
+                                   placeholder="请选择"
+                                   size="large"
+                                   style="width: 240px">
+                            <el-option v-for="item in options1"
+                                       :key="item.ffk_id"
+                                       :label="item.first_kind_name"
+                                       :value="item.first_kind_id+item.first_kind_name" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="II级机构名称" prop="second_kind_name">
+                        <el-select v-model="uformAdd.second_kind_name"
+                                   placeholder="请选择"
+                                   size="large"
+                                   style="width: 240px"
+                                   v-on:click="xxx()">
+                            <el-option v-for="item in options2"
+                                       :key="item.fsk_id"
+                                       :label="item.second_kind_name"
+                                       :value="item.second_kind_id+item.second_kind_name" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="III级机构编号" prop="third_kind_id">
+                        <el-input v-model="uformAdd.third_kind_id" />
+                    </el-form-item>
+                    <el-form-item label="III级机构名称" prop="third_kind_name">
+                        <el-input v-model="uformAdd.third_kind_name" />
+                    </el-form-item>
+                    <el-form-item label="销售责任人编号" prop="third_kind_sale_id">
+                        <el-input v-model="uformAdd.third_kind_sale_id" />
+                    </el-form-item>
+                    <el-form-item label="是否为零售店" prop="third_kind_is_retail">
+                        <el-select v-model="ss"
+                                   placeholder="请选择"
+                                   size="large"
+                                   style="width: 240px">
+                            <el-option v-for="item in sf"
+                                       :key="item.id"
+                                       :label="item.name"
+                                       :value="item.name" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="info" v-on:click="dialogVisibleAdd = false" style="margin-left:333px">取消</el-button>
+                        <el-button type="primary" v-on:click="Addok()">
+                            添加
+                        </el-button>
+                    </el-form-item>
+                </el-form>
+            </span>
+        </el-dialog>
+
+        <el-dialog v-model="dialogVisibleUpd"
+                   title="III级机构修改"
+                   width="500">
+            <span>
+                <el-form ref="fUpdForm" :model="uformUpd" :rules="rules" label-width="auto" style="max-width: 750px">
+                    <el-form-item label="I级机构名称" prop="first_kind_name">
+                        <el-select v-model="uformUpd.first_kind_name"
+                                   placeholder="请选择"
+                                   size="large"
+                                   style="width: 240px">
+                            <el-option v-for="item in options1"
+                                       :key="item.ffk_id"
+                                       :label="item.first_kind_name"
+                                       :value="item.first_kind_id+item.first_kind_name" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="II级机构名称" prop="second_kind_name">
+                        <el-select v-model="uformUpd.second_kind_name"
+                                   placeholder="请选择"
+                                   size="large"
+                                   style="width: 240px"
+                                   v-on:click="yyy()">
+                            <el-option v-for="item in options2"
+                                       :key="item.fsk_id"
+                                       :label="item.second_kind_name"
+                                       :value="item.second_kind_id+item.second_kind_name" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="III级机构编号" prop="third_kind_id">
+                        <el-input v-model="uformUpd.third_kind_id" />
+                    </el-form-item>
+                    <el-form-item label="III级机构名称" prop="third_kind_name">
+                        <el-input v-model="uformUpd.third_kind_name" />
+                    </el-form-item>
+                    <el-form-item label="销售责任人编号" prop="third_kind_sale_id">
+                        <el-input v-model="uformUpd.third_kind_sale_id" />
+                    </el-form-item>
+                    <el-form-item label="是否为零售店" prop="third_kind_is_retail">
+                        <el-select v-model="ss"
+                                   placeholder="请选择"
+                                   size="large"
+                                   style="width: 240px">
+                            <el-option v-for="item in sf"
+                                       :key="item.id"
+                                       :label="item.name"
+                                       :value="item.name" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="info" v-on:click="dialogVisibleUpd = false" style="margin-left:333px">取消</el-button>
+                        <el-button type="primary" v-on:click="upOk()">
+                            修改
+                        </el-button>
+                    </el-form-item>
+                </el-form>
+            </span>
+        </el-dialog>
+
+</div>
+</body>
+<script type="text/javascript">
+    const { createApp, ref, reactive, computed, watchEffect } = Vue;
+    var app = createApp({
+        setup() {
+            var tableData = ref([])
+            let dialogVisibleUpd = ref(false);
+            let dialogVisibleAdd = ref(false);
+            let ss = ref();
+            const sf=ref( [
+                {
+                    name: "是",
+                    id: 0
+                },
+                {
+                    name: "否",
+                    id: 1
+                }
+            ])
+
+
+            //修改的数据
+            const uformUpd = reactive({
+                ftk_id: '',
+                first_kind_id: '',  
+                first_kind_name: '',
+                second_kind_id: '',
+                second_kind_name: '',
+                third_kind_id: '',
+                third_kind_name: '',
+                third_kind_sale_id: ''
+            })
+
+            //添加的数据
+            const uformAdd = reactive({
+                first_kind_name: '',
+                second_kind_name: '',
+                third_kind_id: '',
+                third_kind_name: '',
+                third_kind_sale_id: ''
+            })
+
+            //下拉框1
+            const options1 = ref();
+
+            //下拉框2
+            const options2 = ref();
+            
+
+            const rules = {
+                first_kind_name: [
+                    { required: true, message: '请输入I级机构名称', trigger: 'blur' },
+                ],
+                second_kind_name: [
+                    { required: true, message: '请输入II级机构名称', trigger: 'blur' },
+                ],
+                third_kind_id: [
+                    { required: true, message: '请输入III级机构编号', trigger: 'blur' },
+                ],
+                third_kind_name: [
+                    { required: true, message: '请输入III级机构名称', trigger: 'blur' },
+                ],
+                third_kind_sale_id: [
+                    { required: true, message: '请输入销售责任人编号', trigger: 'blur' },
+                ],
+                third_kind_is_retail: [
+                    { required: false, message: '请输入是否为零售店', trigger: 'blur' },
+                ]
+            }
+
+
+            //查询
+            function Fill() {
+                axios.get('/CFTK/SelectAllCFTK')
+                    .then(res => {
+                        tableData.value = res.data;
+                    })
+            }
+
+            Fill();
+
+            //点击修改，弹出模态框，赋值
+            function handleEdit(row) {
+                dialogVisibleUpd.value = true;
+                uformUpd.ftk_id = row.ftk_id;
+                uformUpd.first_kind_id = row.first_kind_id;
+                uformUpd.first_kind_name = row.first_kind_name;
+                uformUpd.second_kind_id = row.second_kind_id;
+                uformUpd.second_kind_name = row.second_kind_name;
+                uformUpd.third_kind_id = row.third_kind_id;
+                uformUpd.third_kind_name = row.third_kind_name;
+                uformUpd.third_kind_sale_id = row.third_kind_sale_id;
+                uformUpd.third_kind_is_retail = row.third_kind_is_retail;
+                if (row.third_kind_is_retail == "是") {
+                    ss.value = "是"
+                }
+                else {
+                    ss.value = "否"
+                }
+                axios.get('/CFFK/SelectAllCFFK')
+                    .then(res => {
+                        options1.value = res.data
+                    })
+
+            }
+
+            function yyy() {
+                str1 = uformUpd.first_kind_name
+                ffid1 = str1.substring(0, 2);
+                ffname1 = str1.substring(2);
+
+                //联动级联
+                axios.get('/CFSK/SelectCFSKBySKName', {
+                    params: {
+                        x: ffname1
+                    }
+                }).then(res => {
+                    options2.value = res.data
+                })
+            }
+
+            //点击确认修改
+            function upOk() {
+                //获取下拉框的值
+                str1 = uformUpd.first_kind_name
+                ffid1 = str1.substring(0, 2);
+                ffname1 = str1.substring(2);
+
+                //获取下拉框的值
+                str2 = uformUpd.second_kind_name
+                ffid2 = str2.substring(0, 2);
+                ffname2 = str2.substring(2);
+
+                //获取下拉框的值（零售）
+                var ls = this.ss;
+
+                //III级修改
+                this.$refs.fUpdForm.validate((valid) => {
+                    if (valid) {
+                        axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                        axios.put('/CFTK/UpdateCFTK', {
+                            ftk_id: uformUpd.ftk_id,
+                            first_kind_id: ffid1,
+                            first_kind_name: ffname1,
+                            second_kind_id: ffid2,
+                            second_kind_name: ffname2,
+                            third_kind_id: uformUpd.third_kind_id,
+                            third_kind_name: uformUpd.third_kind_name,
+                            third_kind_sale_id: uformUpd.third_kind_sale_id,
+                            third_kind_is_retail: ls,
+                        }).then(res => {
+                            if (res.data) {
+                                alert("修改成功")
+                                Fill();
+                                dialogVisibleUpd.value = false;
+                            }
+                        }).catch(err => {
+                            console.log(err);
+                        })
+                    } else {
+                        return false;
+                    }
+                })
+
+            }
+
+            //点击删除
+            function handleDelete(ftk_id) {
+                if (confirm("确定删除")) {
+                    axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                    axios.post('/CFTK/DeleteCFTK', {
+                        id: ftk_id
+                    }).then(res => {
+                        if (res.data) {
+                            Fill();
+                            alert("删除成功")
+                        }
+                    }).catch(err => {
+                        console.log(err);
+                    })
+                }
+
+            }
+
+
+            function xxx() {
+                str1 = uformAdd.first_kind_name
+                ffid1 = str1.substring(0, 2);
+                ffname1 = str1.substring(2);
+
+                //联动级联
+                axios.get('/CFSK/SelectCFSKBySKName',{
+                    params: {
+                        x: ffname1
+                    }
+                }).then(res => {
+                        options2.value = res.data
+                    })
+            }
+
+
+            //点击增加，出现模态框
+            function Add() {
+                qk();
+                dialogVisibleAdd.value = true;
+                axios.get('/CFFK/SelectAllCFFK')
+                    .then(res => {
+                        options1.value = res.data
+                    })
+            }
+
+            //点击确定增加
+            function Addok() {
+                //获取下拉框的数据
+                str1 = uformAdd.first_kind_name
+                ffid1 = str1.substring(0, 2);
+                ffname1 = str1.substring(2);
+                //获取下拉框的数据
+                str2 = uformAdd.second_kind_name
+                ffid2 = str2.substring(0, 2);
+                ffname2 = str2.substring(2);
+
+                var ls = this.ss;
+                    
+                this.$refs.fAddForm.validate((valid) => {
+                    if (valid) {
+                        axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded";
+                        axios.put('/CFTK/AddCFTK', {
+                            first_kind_id: ffid1,
+                            first_kind_name: ffname1,
+                            second_kind_id: ffid2,
+                            second_kind_name: ffname2,
+                            third_kind_id: uformAdd.third_kind_id,
+                            third_kind_name: uformAdd.third_kind_name,
+                            third_kind_sale_id: uformAdd.third_kind_sale_id,
+                            third_kind_is_retail: ls,
+                        }).then(res => {
+                            if (res.data) {
+                                alert("添加成功")
+                                Fill();
+                                dialogVisibleAdd.value = false;
+                            }
+                        }).catch(err => {
+                            console.log(err);
+                        })
+                    } else {
+                        return false;
+                    }
+                })
+            }
+
+
+            function qk() {
+                uformAdd.first_kind_name=""
+                uformAdd.second_kind_name=""
+                uformAdd.third_kind_id=""
+                uformAdd.third_kind_name=""
+                uformAdd.third_kind_sale_id=""
+                uformAdd.third_kind_is_retail=""
+            }
+            return {
+                tableData,
+                dialogVisibleUpd,
+                dialogVisibleAdd,
+                uformAdd,
+                uformUpd,
+                handleEdit,
+                upOk,
+                handleDelete,
+                Add,
+                Addok,
+                options1,
+                options2,
+                rules,
+                sf,
+                ss,
+                xxx,
+                yyy
+            }
+        }
+    })
+    app.use(ElementPlus);
+    app.mount("#app");
+</script>
+<style type="text/css">
+    body {
+        background-color: #FFFFBB;
+        border: 1px solid #FFDB6F;
+    }
+</style>
